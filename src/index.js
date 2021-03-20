@@ -21,7 +21,7 @@ function showCountries(e){
 function renderCountryCard(country) {
     const markup = countryCardTpl(country);
     console.log(markup)
-    cardContainerRef.insertAdjacentHTML("afterbegin", countryCardTpl(country));
+    cardContainerRef.insertAdjacentHTML("afterbegin", countryCardTpl);
 }
 
 function errorFetch(error) {

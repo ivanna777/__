@@ -165,7 +165,7 @@ function showCountries(e) {
 function renderCountryCard(country) {
   var markup = (0, _country.default)(country);
   console.log(markup);
-  cardContainerRef.insertAdjacentHTML("afterbegin", (0, _country.default)(country));
+  cardContainerRef.insertAdjacentHTML("afterbegin", _country.default);
 }
 
 function errorFetch(error) {
