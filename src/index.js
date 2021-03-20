@@ -1,9 +1,6 @@
 import countries from "../src/fetchCountries.js";
 import countryCardTpl from "../src/country.hbs";
-// import { notice, defaultModules } from '@pnotify/core';
-// const debounce = require('lodash.debounce');
-// const countryCardTpl = require("../src/country.hbs");
-
+console.log(countryCardTpl)
 const cardContainerRef = document.querySelector('.countries-cards-container');
 const searchRef = document.querySelector('.js-searchCountry');
 
@@ -21,8 +18,10 @@ function showCountries(e){
     .finally(() => form.reset());
 }
 
-function renderCountryCard() {
-    cardContainerRef.insertAdjacentHTML("afterbegin", countryCardTpl);
+function renderCountryCard(country) {
+    const markup = countryCardTpl(country);
+    console.log(markup)
+    cardContainerRef.insertAdjacentHTML("afterbegin", countryCardTpl(country));
 }
 
 function errorFetch(error) {

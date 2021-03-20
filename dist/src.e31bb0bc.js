@@ -147,9 +147,7 @@ var _country = _interopRequireDefault(require("../src/country.hbs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import { notice, defaultModules } from '@pnotify/core';
-// const debounce = require('lodash.debounce');
-// const countryCardTpl = require("../src/country.hbs");
+console.log(_country.default);
 var cardContainerRef = document.querySelector('.countries-cards-container');
 var searchRef = document.querySelector('.js-searchCountry');
 searchRef.addEventListener('submit', showCountries);
@@ -164,8 +162,10 @@ function showCountries(e) {
   });
 }
 
-function renderCountryCard() {
-  cardContainerRef.insertAdjacentHTML("afterbegin", _country.default);
+function renderCountryCard(country) {
+  var markup = (0, _country.default)(country);
+  console.log(markup);
+  cardContainerRef.insertAdjacentHTML("afterbegin", (0, _country.default)(country));
 }
 
 function errorFetch(error) {
