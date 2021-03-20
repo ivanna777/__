@@ -127,8 +127,10 @@ exports.default = void 0;
 
 function fetchCountries(searchQuery) {
   return fetch("https://restcountries.eu/rest/v2/name/".concat(searchQuery)).then(function (response) {
-    response.json();
-    console.log(response);
+    return response.json();
+  }).then(function (data) {
+    console.log(data);
+    return data;
   });
 }
 
@@ -199,7 +201,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51677" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57803" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
