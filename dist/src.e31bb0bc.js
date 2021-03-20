@@ -165,7 +165,7 @@ function showCountries(e) {
 function renderCountryCard(country) {
   var markup = (0, _country.default)(country);
   console.log(markup);
-  cardContainerRef.insertAdjacentHTML("afterbegin", _country.default);
+  cardContainerRef.insertAdjacentHTML("afterbegin", markup);
 }
 
 function errorFetch(error) {
@@ -199,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51677" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
